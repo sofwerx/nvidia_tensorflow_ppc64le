@@ -129,5 +129,10 @@ RUN mv /usr/local/lib/python2.7/site-packages/* /usr/local/lib/python2.7/dist-pa
 RUN apt-get install -y python-tk protobuf-compiler libprotobuf-dev
 
 RUN pip install numpy mock pandas protobuf==3.2 backports.weakref
+RUN pip install werkzeug
+RUN pip install markdown
+
+RUN ln -s /usr/local /opt/anaconda1anaconda2anaconda3
+RUN ln -nsf /usr/bin/python /usr/local/bin/python
 
 CMD bash
