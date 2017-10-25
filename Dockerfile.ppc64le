@@ -126,7 +126,7 @@ RUN curl -sL https://anaconda.org/anaconda/tensorflow/1.2.1/download/linux-ppc64
 RUN curl -sL https://anaconda.org/anaconda/tensorflow-gpu/1.2.1/download/linux-ppc64le/tensorflow-gpu-1.2.1-py27cuda8.0cudnn6.0_0.tar.bz2 | tar xjf - -C /usr/local
 RUN mv /usr/local/lib/python2.7/site-packages/* /usr/local/lib/python2.7/dist-packages/
 
-RUN apt-get install -y python-tk
+RUN apt-get install -y python-tk protobuf-compiler libprotobuf-dev
 
 RUN pip install numpy mock pandas protobuf==3.2 backports.weakref
 
